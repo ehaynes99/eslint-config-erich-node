@@ -1,0 +1,23 @@
+{
+  "name": "eslint-config-erich-node",
+  "version": "1.0.0",
+  "description": "Eric's eslint config for node.js",
+  "keywords": [
+    "eslint",
+    "node.js"
+  ],
+  "license": "MIT",
+  "author": "Eric Haynes <ehaynes99@gmail.com>",
+  "main": "index.js",
+  "peerDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-import-resolver-node": "^0.3.4",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^5.0.0"
+  }
+}
