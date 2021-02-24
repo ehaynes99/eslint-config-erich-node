@@ -14,7 +14,7 @@ module.exports = {
     'dot-notation': ['warn', { allowPattern: '^([a-z]+(_[a-z]+)+|[A-Z].*)$' }],
     'one-var': ['error', 'never'],
     'one-var-declaration-per-line': ['error', 'always'],
-    'quote-props': 'consistent',
+    'quote-props': ['error', 'consistent'],
     'quotes': ['error', 'single', { avoidEscape: true }],
     'semi': ['error', 'never'],
     'semi-style': ['error', 'first'],

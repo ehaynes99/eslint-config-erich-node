@@ -1,10 +1,13 @@
 {
   "name": "eslint-config-erich-node",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Eric's eslint config for node.js",
   "keywords": [
     "eslint",
     "node.js"
+  ],
+  "files": [
+    "index.js"
   ],
   "license": "MIT",
   "author": "Eric Haynes <ehaynes99@gmail.com>",
