@@ -1,5 +1,11 @@
 module.exports = {
-  extends: ['standard', 'prettier'],
+  extends: [
+    'standard',
+    'eslint:recommended',
+    'plugin:import/recommended',
+    // prettier must come last to disable conflicts with its formatting
+    'prettier',
+  ],
   env: {
     node: true,
     es2020: true,
@@ -16,11 +22,23 @@ module.exports = {
     'one-var-declaration-per-line': ['error', 'always'],
     'quote-props': ['error', 'consistent'],
     'quotes': ['error', 'single', { avoidEscape: true }],
-    'semi': ['error', 'never'],
-    'semi-style': ['error', 'first'],
+    'semi': ['error', 'always'],
     'space-before-function-paren': [
       'error',
       { anonymous: 'never', asyncArrow: 'always', named: 'never' },
     ],
+    'no-unused-vars': [
+      'error',
+      { args: 'after-used', varsIgnorePattern: '^_' },
+    ],
   },
-}
+  overrides: [
+    {
+      files: ['**/*.ts'],
+      parser: '@typescript-eslint/parser',
+      rules: {
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+      },
+    },
+  ],
+};
