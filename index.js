@@ -4,7 +4,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:import/recommended',
     // prettier must come last to disable conflicts with its formatting
-    'prettier',
+    'plugin:prettier/recommended',
   ],
   env: {
     node: true,
@@ -23,6 +23,7 @@ module.exports = {
     'quote-props': ['error', 'consistent'],
     'quotes': ['error', 'single', { avoidEscape: true }],
     'semi': ['error', 'always'],
+    'no-multi-spaces': 'error',
     'space-before-function-paren': [
       'error',
       { anonymous: 'never', asyncArrow: 'always', named: 'never' },
