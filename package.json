@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-erich-node",
-  "version": "1.1.3",
+  "version": "1.1.5",
   "description": "Eric's eslint config for node.js",
   "repository": "https://github.com/ehaynes99/eslint-config-erich-node",
   "homepage": "https://github.com/ehaynes99/eslint-config-erich-node",
@@ -10,10 +10,15 @@
   ],
   "license": "MIT",
   "author": "Eric Haynes <ehaynes99@gmail.com>",
-  "main": "index.js",
+  "main": ".eslintrc.js",
   "files": [
-    "index.js"
+    ".eslintrc.js"
   ],
+  "scripts": {
+    "print-ts-config": "eslint --print-config *.ts",
+    "print-js-config": "eslint --print-config *.js",
+    "prepublishOnly": "npm run print-ts-config && npm run print-ts-config"
+  },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.28.0",

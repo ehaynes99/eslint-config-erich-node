@@ -35,11 +35,17 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/*.ts'],
+      files: ['**/*.ts', '**/*.tsx'],
       parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint'],
+      extends: [
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+        // prettier must come last to disable conflicts with its formatting
+        'plugin:prettier/recommended',
+      ],
       rules: {
         // disable the js and override with ts rule because it breaks type definitions
-        'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': [
           'error',
           { args: 'after-used', varsIgnorePattern: '^_' },
