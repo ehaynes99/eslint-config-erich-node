@@ -45,12 +45,12 @@ module.exports = {
         'plugin:prettier/recommended',
       ],
       rules: {
-        // disable the js and override with ts rule because it breaks type definitions
         '@typescript-eslint/no-unused-vars': [
           'error',
           { args: 'after-used', varsIgnorePattern: '^_' },
         ],
         '@typescript-eslint/explicit-module-boundary-types': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
       },
     },
   ],
